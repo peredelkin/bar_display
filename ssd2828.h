@@ -89,7 +89,7 @@
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned DIR :16;
+		unsigned DIR :16;			//Device Identification Number
 	} bit;
 } ssd2828_DIR_t;
 static_assert(sizeof(ssd2828_DIR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_DIR_t!");
@@ -97,8 +97,8 @@ static_assert(sizeof(ssd2828_DIR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd28
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned HSA :8;	//Horizontal Sync Active Period
-		unsigned VSA :8;	//Vertical Sync Active Period
+		unsigned HSA :8;			//Horizontal Sync Active Period
+		unsigned VSA :8;			//Vertical Sync Active Period
 	} bit;
 } ssd2828_VICR1_t;
 static_assert(sizeof(ssd2828_VICR1_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_VICR1_t!");
@@ -106,8 +106,8 @@ static_assert(sizeof(ssd2828_VICR1_t) == SSD2828_DATA_SIZE, "Invalid size of ssd
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned HBP :8;	//Horizontal Back Porch Period
-		unsigned VBP :8;	//Vertical Back Porch Period
+		unsigned HBP :8;			//Horizontal Back Porch Period
+		unsigned VBP :8;			//Vertical Back Porch Period
 	} bit;
 } ssd2828_VICR2_t;
 static_assert(sizeof(ssd2828_VICR2_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_VICR2_t!");
@@ -115,8 +115,8 @@ static_assert(sizeof(ssd2828_VICR2_t) == SSD2828_DATA_SIZE, "Invalid size of ssd
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned HFP :8;	//Horizontal Front Porch Period
-		unsigned VFP :8;	//Vertical Front Porch Period
+		unsigned HFP :8;			//Horizontal Front Porch Period
+		unsigned VFP :8;			//Vertical Front Porch Period
 	} bit;
 } ssd2828_VICR3_t;
 static_assert(sizeof(ssd2828_VICR3_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_VICR3_t!");
@@ -124,7 +124,7 @@ static_assert(sizeof(ssd2828_VICR3_t) == SSD2828_DATA_SIZE, "Invalid size of ssd
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned HACT :16;	//Horizontal Active Period
+		unsigned HACT :16;			//Horizontal Active Period
 	} bit;
 } ssd2828_VICR4_t;
 static_assert(sizeof(ssd2828_VICR4_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_VICR4_t!");
@@ -132,7 +132,7 @@ static_assert(sizeof(ssd2828_VICR4_t) == SSD2828_DATA_SIZE, "Invalid size of ssd
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned VACT :16;	//Vertical Active Period
+		unsigned VACT :16;			//Vertical Active Period
 	} bit;
 } ssd2828_VICR5_t;
 static_assert(sizeof(ssd2828_VICR5_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_VICR5_t!");
@@ -140,17 +140,17 @@ static_assert(sizeof(ssd2828_VICR5_t) == SSD2828_DATA_SIZE, "Invalid size of ssd
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned VPF :2;	//Video Pixel Format
-		unsigned VM :2;		//Video Mode
-		unsigned VCS :1;	//Video Clock Suspend
-		unsigned BLLP :1;	//BLLP Control
-		unsigned NVD :1;	//Non Video Data Transmission Control
-		unsigned NVB :1;	//Non Video Data Burst Mode Control
-		unsigned CBM :1;	//Compress Burst Mode Control
+		unsigned VPF :2;			//Video Pixel Format
+		unsigned VM :2;				//Video Mode
+		unsigned VCS :1;			//Video Clock Suspend
+		unsigned BLLP :1;			//BLLP Control
+		unsigned NVD :1;			//Non Video Data Transmission Control
+		unsigned NVB :1;			//Non Video Data Burst Mode Control
+		unsigned CBM :1;			//Compress Burst Mode Control
 		unsigned RES_9_12 :4;
-		unsigned PCLK_P :1;	//PCLK_P
-		unsigned HS_P :1;	//HS_P
-		unsigned VS_P :1;	//VS_P
+		unsigned PCLK_P :1;			//PCLK_P
+		unsigned HS_P :1;			//HS_P
+		unsigned VS_P :1;			//VS_P
 	} bit;
 } ssd2828_VICR6_t;
 static_assert(sizeof(ssd2828_VICR6_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_VICR6_t!");
@@ -158,18 +158,18 @@ static_assert(sizeof(ssd2828_VICR6_t) == SSD2828_DATA_SIZE, "Invalid size of ssd
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned HS :1;		//HS Mode
-		unsigned CKE :1;	//Clock Lane Enable
-		unsigned SLP :1;	//Sleep Mode Enable
-		unsigned VEN :1;	//Video Mode Enable
-		unsigned HCLK :1;	//HS Clock Disable
-		unsigned CSS :1;	//Clock Source Select
-		unsigned DCS :1;	//DCS Enable
-		unsigned REN :1;	//Read Enable
-		unsigned ECD :1;	//ECC CRC Check Disable
-		unsigned EOT :1;	//EOT Packet Enable
-		unsigned LPE :1;	//Long Packet Enable
-		unsigned TXD :1;	//Transmit Disable
+		unsigned HS :1;				//HS Mode
+		unsigned CKE :1;			//Clock Lane Enable
+		unsigned SLP :1;			//Sleep Mode Enable
+		unsigned VEN :1;			//Video Mode Enable
+		unsigned HCLK :1;			//HS Clock Disable
+		unsigned CSS :1;			//Clock Source Select
+		unsigned DCS :1;			//DCS Enable
+		unsigned REN :1;			//Read Enable
+		unsigned ECD :1;			//ECC CRC Check Disable
+		unsigned EOT :1;			//EOT Packet Enable
+		unsigned LPE :1;			//Long Packet Enable
+		unsigned TXD :1;			//Transmit Disable
 		unsigned RES :4;
 	} bit;
 } ssd2828_CFGR_t;
@@ -178,10 +178,10 @@ static_assert(sizeof(ssd2828_CFGR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned VC1 :2;	//Virtual Channel ID for RGB Interface
-		unsigned VC2 :2;	//Virtual Channel ID for SPI Interface
-		unsigned VCE :2;	//Virtual Channel ID for EOT Packet
-		unsigned VCM :2;	//Virtual Channel ID for Maximum Return Size Packet
+		unsigned VC1 :2;			//Virtual Channel ID for RGB Interface
+		unsigned VC2 :2;			//Virtual Channel ID for SPI Interface
+		unsigned VCE :2;			//Virtual Channel ID for EOT Packet
+		unsigned VCM :2;			//Virtual Channel ID for Maximum Return Size Packet
 		unsigned RES_8_15 :8;
 	} bit;
 } ssd2828_VCR_t;
@@ -190,10 +190,10 @@ static_assert(sizeof(ssd2828_VCR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd28
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned PEN :1;	//PLL Enable
+		unsigned PEN :1;			//PLL Enable
 		unsigned RES_1_12 :12;
-		unsigned SYS_DIS :1;//SYS_clk DISable
-		unsigned SYSD :2;	//SYS_clk Divider
+		unsigned SYS_DIS :1;		//SYS_clk DISable
+		unsigned SYSD :2;			//SYS_clk Divider
 	} bit;
 } ssd2828_PCR_t;
 static_assert(sizeof(ssd2828_PCR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_PCR_t!");
@@ -201,10 +201,10 @@ static_assert(sizeof(ssd2828_PCR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd28
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned NS :8;		//PLL Multiplier
-		unsigned MS :5;		//PLL Divider
+		unsigned NS :8;				//PLL Multiplier
+		unsigned MS :5;				//PLL Divider
 		unsigned RES_13 :1;
-		unsigned FR :2;		//Frequency Range
+		unsigned FR :2;				//Frequency Range
 	} bit;
 } ssd2828_PLCR_t;
 static_assert(sizeof(ssd2828_PLCR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_PLCR_t!");
@@ -212,7 +212,7 @@ static_assert(sizeof(ssd2828_PLCR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned LPD :6;	//LP Clock Divider
+		unsigned LPD :6;			//LP Clock Divider
 		unsigned RES_6_15: 10;
 	} bit;
 } ssd28282_CCR_t;
@@ -221,7 +221,7 @@ static_assert(sizeof(ssd28282_CCR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned TDC_L :16;	//Transmit Data Count
+		unsigned TDC_L :16;			//Transmit Data Count
 	} bit;
 } ssd2828_PSCR1_t;
 static_assert(sizeof(ssd2828_PSCR1_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_PSCR1_t!");
@@ -229,7 +229,7 @@ static_assert(sizeof(ssd2828_PSCR1_t) == SSD2828_DATA_SIZE, "Invalid size of ssd
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned TDC_H :16;	//Transmit Data Count
+		unsigned TDC_H :16;			//Transmit Data Count
 	} bit;
 } ssd2828_PSCR2_t;
 static_assert(sizeof(ssd2828_PSCR2_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_PSCR2_t!");
@@ -237,7 +237,7 @@ static_assert(sizeof(ssd2828_PSCR2_t) == SSD2828_DATA_SIZE, "Invalid size of ssd
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned PST :13;	//Packet Size Threshold
+		unsigned PST :13;			//Packet Size Threshold
 		unsigned RES_13_15 :3;
 	} bit;
 } ssd2828_PSCR3_t;
@@ -246,7 +246,7 @@ static_assert(sizeof(ssd2828_PSCR3_t) == SSD2828_DATA_SIZE, "Invalid size of ssd
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned GPD :16;	//Generic Packet Drop
+		unsigned GPD :16;			//Generic Packet Drop
 	} bit;
 } ssd2828_GPDR_t;
 static_assert(sizeof(ssd2828_GPDR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_GPDR_t!");
@@ -254,9 +254,9 @@ static_assert(sizeof(ssd2828_GPDR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned COP :1;	//Cancel Operation
+		unsigned COP :1;			//Cancel Operation
 		unsigned RES_1_7 :7;
-		unsigned RST :1;	//Software Reset
+		unsigned RST :1;			//Software Reset
 		unsigned RES_9_15 :7;
 	} bit;
 } ssd2828_OCR_t;
@@ -265,7 +265,7 @@ static_assert(sizeof(ssd2828_OCR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd28
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned MRS :16;	//Maximum Return Size
+		unsigned MRS :16;			//Maximum Return Size
 	} bit;
 } ssd2828_MRSR_t;
 static_assert(sizeof(ssd2828_MRSR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_MRSR_t!");
@@ -273,7 +273,7 @@ static_assert(sizeof(ssd2828_MRSR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned RDC :16;	//Return Data Count
+		unsigned RDC :16;			//Return Data Count
 	} bit;
 } ssd2828_RDCR_t;
 static_assert(sizeof(ssd2828_RDCR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_RDCR_t!");
@@ -281,7 +281,7 @@ static_assert(sizeof(ssd2828_RDCR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned AR :16;	//ACK Response
+		unsigned AR :16;			//ACK Response
 	} bit;
 } ssd2828_ARSR_t;
 static_assert(sizeof(ssd2828_ARSR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_ARSR_t!");
@@ -289,12 +289,12 @@ static_assert(sizeof(ssd2828_ARSR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned FBW :1;	//Force BTA After Write
-		unsigned FBT :1;	//Force BTA TE
-		unsigned FBC :1;	//Force Bus Contention
-		unsigned RTB :1;	//Register Triggered BTA
-		unsigned RT :1;		//Reset Trigger
-		unsigned IBC :1;	//Ignore Bus Contention
+		unsigned FBW :1;			//Force BTA After Write
+		unsigned FBT :1;			//Force BTA TE
+		unsigned FBC :1;			//Force Bus Contention
+		unsigned RTB :1;			//Register Triggered BTA
+		unsigned RT :1;				//Reset Trigger
+		unsigned IBC :1;			//Ignore Bus Contention
 		unsigned RES_6_15 :10;
 	} bit;
 } ssd2828_LCR_t;
@@ -303,74 +303,342 @@ static_assert(sizeof(ssd2828_LCR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd28
 typedef union {
 	uint16_t all;
 	struct PACKED {
-		unsigned RDRE :1;	//Read Data Ready Enable
-		unsigned POE :1;	//Packet Operation Enable
-		unsigned BTARE :1;	//BTA Response Enable
-		unsigned ARRE :1;	//ACK Response Ready Enable
+		unsigned RDRE :1;			//Read Data Ready Enable
+		unsigned POE :1;			//Packet Operation Enable
+		unsigned BTARE :1;			//BTA Response Enable
+		unsigned ARRE :1;			//ACK Response Ready Enable
 		unsigned RES_4 :1;
-		unsigned HSTOE :1;	//HS TX Time Out Enable
-		unsigned LPTOE :1;	//LP RX Time Out Enable
-		unsigned PLSE :1;	//PLL Lock Status Enable
-		unsigned MLAE :1;	//MCU Long Buffer Available Enable
-		unsigned MLEE :1;	//MCU Long Buffer Empty Enable
+		unsigned HSTOE :1;			//HS TX Time Out Enable
+		unsigned LPTOE :1;			//LP RX Time Out Enable
+		unsigned PLSE :1;			//PLL Lock Status Enable
+		unsigned MLAE :1;			//MCU Long Buffer Available Enable
+		unsigned MLEE :1;			//MCU Long Buffer Empty Enable
 		unsigned RES_10_13 :4;
-		unsigned CBAE :1;	//Command Buffer Available Enable
-		unsigned CBEE :1;	//Command Buffer Empty Enable
+		unsigned CBAE :1;			//Command Buffer Available Enable
+		unsigned CBEE :1;			//Command Buffer Empty Enable
 	} bit;
 } ssd2828_ICR_t;
 static_assert(sizeof(ssd2828_ICR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_ICR_t!");
 
 typedef union {
+	uint16_t all;
 	struct PACKED {
-		unsigned RDR :1;	//Read Data Ready
-		unsigned PO :1;		//Packet Operation
-		unsigned BTAR :1;	//BTA Response
-		unsigned ARR :1;	//ACK Response Ready
-		unsigned ATR :1;	//ACK Trigger Response
-		unsigned HSTO :1;	//HS TX Time Out
-		unsigned LPTO :1;	//LP RX Time Out
-		unsigned PLS :1;	//PLL Lock Status
-		unsigned MLA :1;	//Reserved
-		unsigned MLE :1;	//Reserved
-		unsigned DST :1;	//Data Lane Status
-		unsigned CST :1;	//Clock Lane Status
+		unsigned RDR :1;			//Read Data Ready
+		unsigned PO :1;				//Packet Operation
+		unsigned BTAR :1;			//BTA Response
+		unsigned ARR :1;			//ACK Response Ready
+		unsigned ATR :1;			//ACK Trigger Response
+		unsigned HSTO :1;			//HS TX Time Out
+		unsigned LPTO :1;			//LP RX Time Out
+		unsigned PLS :1;			//PLL Lock Status
+		unsigned MLA :1;			//Reserved
+		unsigned MLE :1;			//Reserved
+		unsigned DST :1;			//Data Lane Status
+		unsigned CST :1;			//Clock Lane Status
 		unsigned RES_12_13 :2;
-		unsigned CBA :1;	//Command Buffer Available
-		unsigned CBE :1;	//Command Buffer Empty
+		unsigned CBA :1;			//Command Buffer Available
+		unsigned CBE :1;			//Command Buffer Empty
 	} bit;
 } ssd2828_ISR_t;
 static_assert(sizeof(ssd2828_ISR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_ISR_t!");
 
 typedef union {
+	uint16_t all;
 	struct PACKED {
-		unsigned VMM :1;	//VC Mis Match
+		unsigned VMM :1;			//VC Mis Match
 		unsigned RES_2 :1;
-		unsigned CONT :1;	//Contention
+		unsigned CONT :1;			//Contention
 		unsigned RES_3 :1;
-		unsigned MLO :1;	//Reserved
+		unsigned MLO :1;			//Reserved
 		unsigned RES_5_6 :2;
-		unsigned CBO :1;	//Command Buffer Overflow
-		unsigned ECCE1 :1;	//ECC Single Bit Error
-		unsigned ECCE2 :1;	//ECC Multi Bit Error
-		unsigned CRCE :1;	//CRC Error
+		unsigned CBO :1;			//Command Buffer Overflow
+		unsigned ECCE1 :1;			//ECC Single Bit Error
+		unsigned ECCE2 :1;			//ECC Multi Bit Error
+		unsigned CRCE :1;			//CRC Error
 		unsigned RES_11_15 :5;
 	} bit;
 } ssd2828_ESR_t;
 static_assert(sizeof(ssd2828_ESR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_ESR_t!");
 
 typedef union {
+	uint16_t all;
 	struct PACKED {
-		unsigned HPD :8;	//HS Prepare Delay
-		unsigned HZD :8;	//HS Zero Delay
+		unsigned HPD :8;			//HS Prepare Delay
+		unsigned HZD :8;			//HS Zero Delay
 	} bit;
 } ssd2828_DAR1_t;
 static_assert(sizeof(ssd2828_DAR1_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_DAR1_t!");
 
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned CPD :8;			//CLK Prepare Delay
+		unsigned CZD :8;			//CLK Zero Delay
+	} bit;
+} ssd2828_DAR2_t;
+static_assert(sizeof(ssd2828_DAR2_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_DAR2_t!");
 
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned CPTD :8;			//CLK Post Delay
+		unsigned CPED :8;			//CLK Pre Delay
+	} bit;
+} ssd2828_DAR3_t;
+static_assert(sizeof(ssd2828_DAR3_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_DAR3_t!");
 
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned HTD :8;			//HS Trail Delay
+		unsigned CTD :8;			//CLK Trail Delay
+	} bit;
+} ssd2828_DAR4_t;
+static_assert(sizeof(ssd2828_DAR4_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_DAR4_t!");
 
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned WUD :16;			//Wake Up Delay
+	} bit;
+} ssd2828_DAR5_t;
+static_assert(sizeof(ssd2828_DAR5_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_DAR5_t!");
 
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned TGET :4;			//TA Get Delay
+		unsigned RES_4_7: 4;
+		unsigned TGO :4;			//TA Go Delay
+		unsigned RES_12_15 :4;
+	} bit;
+} ssd2828_DAR6_t;
+static_assert(sizeof(ssd2828_DAR6_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_DAR6_t!");
 
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned HTT_L :16;			//HS TX Timer
+	} bit;
+} ssd2828_HTTR1_t;
+static_assert(sizeof(ssd2828_HTTR1_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_HTTR1_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned HTT_H :16;			//HS TX Timer
+	} bit;
+} ssd2828_HTTR2_t;
+static_assert(sizeof(ssd2828_HTTR2_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_HTTR2_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned LRT_L :16;			//LP RX Timer
+	} bit;
+} ssd2828_LRTR1_t;
+static_assert(sizeof(ssd2828_LRTR1_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_LRTR1_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned LRT_H :16;			//LP RX Timer
+	} bit;
+} ssd2828_LRTR2_t;
+static_assert(sizeof(ssd2828_LRTR2_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_LRTR2_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned TER :1;			//TE Response
+		unsigned RES_1_15 :15;
+	} bit;
+} ssd2828_TSR_t;
+static_assert(sizeof(ssd2828_TSR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_TSR_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned RRA :8;			//Register Read Address
+		unsigned RES_9_15 :8;
+	} bit;
+} ssd2828_LRR_t;
+static_assert(sizeof(ssd2828_LRR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_LRR_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned LOCK :16;			//LOCK
+	} bit;
+} ssd2828_PLLR_t;
+static_assert(sizeof(ssd2828_PLLR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_PLLR_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned CO :1;				//Color Order
+		unsigned END :1;			//Endianess
+		unsigned PNB :6;			//Packet Number in Blanking Period
+		unsigned FLM :1;			//Force Lane Mode
+		unsigned EIC :5;			//Error Injection Control
+		unsigned TM_FL0 :2;			//Test Mode/Force Lane 0
+	} bit;
+} ssd2828_TR_t;
+static_assert(sizeof(ssd2828_TR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_TR_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned TEC :16;	//TE Count
+	} bit;
+} ssd2828_TECR_t;
+static_assert(sizeof(ssd2828_TECR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_TECR_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned D0_DELAY_SEL :6;	//Data lane 0 DELAY SELect
+		unsigned D3_DELAY_0_1 :2;	//Data lane 3 DELAY SELect[1:0]
+		unsigned D1_DELAY_SEL :6;	//Data lane 1 DELAY SELect
+		unsigned D3_DELAY_2_3 :2;	//Data lane 3 DELAY SELect[3:2]
+	} bit;
+} ssd2828_ACR1_t;
+static_assert(sizeof(ssd2828_ACR1_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_ACR1_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned D2_DELAY_SEL :6;	//Data lane 2 DELAY SELect
+		unsigned D3_DELAY_4_5 :2;	//Data lane 3 DELAY SELect[5:4]
+		unsigned HSTX_DS :3;		//High Speed TX current Driver Selection
+		unsigned LPTXDS :3;			//Low Power TX Drive strength Selection
+		unsigned HSTX_Z :2;			//High Speed Transmit Trimming control
+	} bit;
+} ssd2828_ACR2_t;
+static_assert(sizeof(ssd2828_ACR2_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_ACR2_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned ISEL :3;			//Current Output Trim
+		unsigned TC :3;				//Temperature Coefficient Select
+		unsigned THFT0 :1;			//ThresHold 0
+		unsigned THFT1 :1;			//ThresHold 1
+		unsigned PREEM_E :1;		//PRE-EMphasis Enable
+		unsigned PREEM_MOD :2;		//PREEM_MOD
+		unsigned PREEM_SEL :3;		//PREEM_SEL
+		unsigned TLFT0 :1;
+		unsigned TLFT1 :1;
+	} bit;
+} ssd2828_ACR3_t;
+static_assert(sizeof(ssd2828_ACR3_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_ACR3_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned GF_E :1;			//Glitch filter Enable
+		unsigned GFFT0 :1;			//Glitch Filter Selection 0
+		unsigned GFFT1 :1;			//Glitch Filter Selection 1
+		unsigned CD_EN :1;			//Contention Detection Enable
+		unsigned ENLV :1;			//BandGap Reference Enable
+		unsigned TCI :3;			//Current Temperature Coefficient Select
+		unsigned RES_8 :1;
+		unsigned CKF :1;			//ClocK Flip
+		unsigned CLK_DELAY_SEL :6;	//CLocK lane DELAY SELect
+	} bit;
+} ssd2828_ACR4_t;
+static_assert(sizeof(ssd2828_ACR4_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_ACR4_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned IAS :1;			//Interrupt Active State
+		unsigned IOT :2;			//Interrupt Output Type
+		unsigned RES_3_15 :13;
+	} bit;
+} ssd2828_IOCR_t;
+static_assert(sizeof(ssd2828_IOCR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_IOCR_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned VFN :4;			//Vertical Front Porch Non Video Data Window
+		unsigned VBN :4;			//Vertical Back Porch Non Video Data Window
+		unsigned RES_8_15 :8;
+	} bit;
+} ssd2828_VICR7_t;
+static_assert(sizeof(ssd2828_VICR7_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_VICR7_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned LS0 :2;			//Lane Select
+		unsigned RES_2_15 :14;
+	} bit;
+} ssd2828_LCFR_t;
+static_assert(sizeof(ssd2828_LCFR_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_LCFR_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned HED :6;			//HS Exit Delay
+		unsigned RES_6_15 :10;
+	} bit;
+} ssd2828_DAR7_t;
+static_assert(sizeof(ssd2828_DAR7_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_DAR7_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned MR_PULL :2;		//MIPI Reset Pull
+		unsigned IS_PULL :2;		//If_Sel Pull
+		unsigned PS0_PULL :2;		//Pin Select 0 Pull
+		unsigned PS1_PULL :2;		//Pin Select 1 Pull
+		unsigned PS2_PULL :2;		//Pin Select 2 Pull
+		unsigned PS3_PULL :2;		//Pin Select 3 Pull
+		unsigned PS4_PULL :2;		//Pin Select 4 Pull
+		unsigned XTAL_PULL :2;		//Xtal Mode Pull
+	} bit;
+} ssd2828_PUCR1_t;
+static_assert(sizeof(ssd2828_PUCR1_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_PUCR1_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned CSX_PULL :2;		//Chip Select Pull
+		unsigned DL_PULL :2;		//Data low byte Pull
+		unsigned DM_PULL :2;		//Data medium byte Pull
+		unsigned DH_PULL :2;		//Data high byte Pull
+		unsigned VS_PULL :2;		//Vsync Pull
+		unsigned PC_PULL :2;		//Pixel_clk Pull
+		unsigned HS_PULL :2;		//Hsync Pull
+		unsigned DEN_PULL :2;		//Den Pull
+	} bit;
+} ssd2828_PUCR2_t;
+static_assert(sizeof(ssd2828_PUCR2_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_PUCR2_t!");
+
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned CM_PULL :2;
+		unsigned SHUT_PULL :2;
+		unsigned SDC_PULL :2;
+		unsigned SCK_PULL :2;
+		unsigned SDI_PULL :2;
+		unsigned RES_10_15 :6;
+	} bit;
+} ssd2828_PUCR3_t;
+static_assert(sizeof(ssd2828_PUCR3_t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_PUCR3_t!");
+
+/*
+typedef union {
+	uint16_t all;
+	struct PACKED {
+		unsigned
+	} bit;
+} ssd2828__t;
+static_assert(sizeof(ssd2828__t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828__t!");
+*/
 
 
 
