@@ -15,7 +15,7 @@
 #define PACKED __attribute__((packed))
 #endif
 
-#define SSD2828_ADDR_DIR		0xB0	//Device Identification Register
+#define SSD2828_ADDR_DIR		0xB0  //Device Identification Register
 #define SSD2828_ADDR_VICR1		0xB1  //RGB Interface Control Register 1
 #define SSD2828_ADDR_VICR2		0xB2  //RGB Interface Control Register 2
 #define SSD2828_ADDR_VICR3		0xB3  //RGB Interface Control Register 3
@@ -82,7 +82,7 @@
 #define SSD2828_ADDR_ACR5		0xF7  //Analog Control Register 5
 #define SSD2828_ADDR_RR			0xFF  //Read Register
 
-#define SSD2828_DATA_DIR		0x2828	//Device Identification Register
+#define SSD2828_DATA_DIR		0x2828 //Device Identification Register
 
 #define SSD2828_DATA_SIZE 2
 
