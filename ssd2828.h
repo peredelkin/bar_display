@@ -901,8 +901,8 @@ static_assert(sizeof(ssd2828__t) == SSD2828_DATA_SIZE, "Invalid size of ssd2828_
 */
 
 typedef struct {
-	uint32_t data_count;
-	uint8_t* data_array;
+	const uint32_t data_count;
+	const uint8_t* data_array;
 } mipi_reg_t;
 
 

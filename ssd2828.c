@@ -11,41 +11,41 @@ __attribute__((weak)) void delay_ms(uint32_t ms) {
 	(void) ms;
 }
 
-bool DC_2828; //D/C
-bool SDI_2828; //MOSI
-bool SCLK_2828; //CLK
-bool SDO_2828; //MISO
-bool CS_2828; //CS
-bool RST_2828; //RST
-
-/* SSD2828 interface define */
-
-sbit SDI_2828 = P1 ^ 5;
-sbit SCLK_2828 = P1 ^ 7;
-sbit SDO_2828 = P1 ^ 6;
-sbit CS_2828 = P3 ^ 6;
-sbit RST_2828 = P3 ^ 4;
+//bool DC_2828; //D/C
+//bool SDI_2828; //MOSI
+//bool SCLK_2828; //CLK
+//bool SDO_2828; //MISO
+//bool CS_2828; //CS
+//bool RST_2828; //RST
+//
+///* SSD2828 interface define */
+//
+//sbit SDI_2828 = P1 ^ 5;
+//sbit SCLK_2828 = P1 ^ 7;
+//sbit SDO_2828 = P1 ^ 6;
+//sbit CS_2828 = P3 ^ 6;
+//sbit RST_2828 = P3 ^ 4;
 
 void SSD2828_Reset(void) {
 
-	RST_2828 = 0;
-	delay_ms(30);
-	RST_2828 = 1;
-	delay_ms(50);
-
-	CS_2828 = 1;
-	SCLK_2828 = 0;
-	SDI_2828 = 1;
+//	RST_2828 = 0;
+//	delay_ms(30);
+//	RST_2828 = 1;
+//	delay_ms(50);
+//
+//	CS_2828 = 1;
+//	SCLK_2828 = 0;
+//	SDI_2828 = 1;
 
 }
 
 void SSD2828_send_cmd(unsigned int Sdata) {
 	unsigned char i;
 
-	CS_2828 = 0;
-	SDI_2828 = 0;
-	SCLK_2828 = 0;
-	SCLK_2828 = 1;
+//	CS_2828 = 0;
+//	SDI_2828 = 0;
+//	SCLK_2828 = 0;
+//	SCLK_2828 = 1;
 
 //	for (i = 8; i > 0; i--) {
 //		if (Sdata & 0x80)
@@ -57,17 +57,17 @@ void SSD2828_send_cmd(unsigned int Sdata) {
 //		Sdata <<= 1;
 //	}
 
-	SCLK_2828 = 0;
-	CS_2828 = 1;
+//	SCLK_2828 = 0;
+//	CS_2828 = 1;
 }
 
 void SSD2828_send_data(unsigned int Sdata) {
 	unsigned char i;
 
-	CS_2828 = 0;
-	SDI_2828 = 1;
-	SCLK_2828 = 0;
-	SCLK_2828 = 1;
+//	CS_2828 = 0;
+//	SDI_2828 = 1;
+//	SCLK_2828 = 0;
+//	SCLK_2828 = 1;
 
 //	for (i = 8; i > 0; i--) {
 //		if (Sdata & 0x80)
@@ -79,8 +79,8 @@ void SSD2828_send_data(unsigned int Sdata) {
 //		Sdata <<= 1;
 //	}
 
-	SCLK_2828 = 0;
-	CS_2828 = 1;
+//	SCLK_2828 = 0;
+//	CS_2828 = 1;
 }
 
 //unsigned char SSD2828_read_data(void) {
@@ -110,7 +110,7 @@ void SSD2828_send_acmd(unsigned int num) {
 	SSD2828_send_cmd(SSD2828_ADDR_PDR); //Packet Drop Register
 }
 
-SSD2828_initial() {
+void SSD2828_initial() {
 
 	SSD2828_send_cmd(SSD2828_ADDR_CFGR);  //Configuration Register
 	SSD2828_send_data(0x50); //DCS = 0x1, HCLK = 0x1

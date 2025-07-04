@@ -310,7 +310,7 @@ static const uint8_t ota7290B_reg_0x49[OTA7290B_REG_0x49_COUNT] = {
 };
 
 #define OTA7290B_REGS_COUNT 42
-static const mipi_reg_t[OTA7290B_REGS_COUNT] = {
+static const mipi_reg_t OTA7290B_init_array[OTA7290B_REGS_COUNT] = {
 		{
 				.data_count = OTA7290B_ENTER_FITI_CMD_COUNT,
 				.data_array = ota7290B_enter_fiti_cmd
@@ -333,7 +333,7 @@ static const mipi_reg_t[OTA7290B_REGS_COUNT] = {
 
 		{
 				.data_count = OTA7290B_REG_0x32_COUNT,
-				.data_array = передать ota7290B_reg_0x32
+				.data_array = ota7290B_reg_0x32
 		},
 
 		{
